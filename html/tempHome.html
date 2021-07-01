@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="border-text" id="text-main-classx">
+        CLASS X
+    </div>
+    <div class="border-text" id="text-main-class-name">
+        JSA-05
+    </div>
+    <div id="star-ani-content">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+    </div>
+    <div class="home-container">
+        <div class="navbar">
+            <div class="header" id="header">
+                <div>
+                </div>
+                <ul class="nav">
+                    <li id="Icon">
+
+                        <a href="/tempHome.html" style="width: 100%;height: 100%;" id="logo">ㅤㅤㅤㅤ</a>
+                    </li>
+                    <li><a href="#">Trang chủ</a>
+                        <div class="line" id="line-TrangChu"></div>
+                    </li>
+                    <li><a href="#">Tin tức</a>
+                        <div class="line" id="line-TinTuc"></div>
+                    </li>
+                    <li><a href="#">Thông tin</a>
+                        <div class="line" id="line-ThongTin"></div>
+                    </li>
+                    <li><a href="#">Điểm số</a>
+                        <div class="line" id="line-DiemSo"></div>
+                    </li>
+                </ul>
+                <ul class="button-nav">
+                    <li id="signout-btn"><a href="#" class="button">Đăng xuất</a></li>
+                </ul>
+                <div class="user-info">
+
+                </div>
+            </div>
+        </div>
+        <section class="section-header">
+            <div class="area">
+                <div class="text-header" id="text-header">
+                    <div class="middle-align-header">
+                        <img src="../img/logo_max_light.png" alt="Class X" id="logo-header">
+                        <p>JSA-05</p>
+                    </div>
+                </div>
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-first">
+
+            <div class="border-text" id="text-news">
+                NEWS
+            </div>
+            <div class="content tintuc-section-content">
+                <div class="aside-left-content">
+                    <div class="header-content">Tin tức</div>
+                    <div class="tin-tuc-container">
+                        <article>
+                            <div class="img" id="news-1"></div>
+                            <div>
+                                <a href="#">Lorem ipsum dolor sit amet co nsec tetur adi pisi cing elit. Poss imus
+                                    magnam ...
+                                </a>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="img" id="news-2"></div>
+                            <div>
+                                <a href="#">
+                                    Lorem ipsum dolor sit amet consec tetur adipi sicing elit. ...
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="more-news-link"><a href="#">xem thêm...</a> </div>
+                </div>
+                <div class="aside-right-content">
+                    <div class="header-content">HS tiêu biểu</div>
+                    <div class="top-5">
+                        <div class="top-student-container" id="top-1">
+                            <div>Nguyen Thi A</div>
+                            <div class="grade">9</div>
+                        </div>
+                        <div class="top-student-container" id="top-2">
+                            <div>Bui tien Lam</div>
+                            <div class="grade">9</div>
+                        </div>
+                        <div class="top-student-container" id="top-3">
+                            <div>Que Van Dung</div>
+                            <div class="grade">9</div>
+                        </div>
+                        <div class="top-student-container" id="top-4">
+                            <div>Tran COng Vinh</div>
+                            <div class="grade">9</div>
+                        </div>
+                        <div class="top-student-container" id="top-5">
+                            <div>Nguyen ngoc hai</div>
+                            <div class="grade">9</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="border-text" id="text-news">
+                CREATE
+            </div>
+            <div class="content">
+                <div class="header-content">Tạo bài viết</div>
+                <div class="create-tieude">
+                    <input placeholder="Tiêu đề bài viết...">
+                </div>
+                <div class="create-noidung">
+                    <textarea placeholder="Nội dung bài viết..."></textarea>
+                </div>
+                <div class="create-button">
+                    <div> <button class="btn" type="submit">
+                            <span></span>
+                            Đăng tin
+                        </button></div>
+
+                    <script>
+                        $(document).ready(function (e) {
+                            $('.btn').on("mouseenter", function (e) {
+                                x = e.pageX - $(this).offset().left;
+                                y = e.pageY - $(this).offset().top;
+                                $(this).find("span").css({ top: y, left: x })
+                            })
+                            $('.btn').on("mouseout", function (e) {
+                                x = e.pageX - $(this).offset().left;
+                                y = e.pageY - $(this).offset().top;
+                                $(this).find("span").css({ top: y, left: x  })
+                            })
+                        })
+                    </script>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    <script>
+
+        document.getElementById("line-TrangChu").style.visibility = "visible"
+        document.getElementById("line-TinTuc").style.visibility = "hidden"
+        document.getElementById("line-DiemSo").style.visibility = "hidden"
+        document.getElementById("line-ThongTin").style.visibility = "hidden"
+        window.onload = () => {
+            document.getElementById("header").style.background = "rgba(255, 255, 255, 0)"
+
+        }
+        window.onscroll = () => {
+            console.log(document.documentElement.scrollTop)
+            if (document.documentElement.scrollTop < 10) {
+                console.log("true")
+                document.getElementById("header").style.background = "rgba(255, 255, 255, 0)"
+            } else {
+                console.log("false")
+
+                document.getElementById("header").style.background = "rgba(59, 59, 59)"
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

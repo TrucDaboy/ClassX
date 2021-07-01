@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="http://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/valorant');
+    </style>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/canvas_main.js"></script>
+</head>
+
+<body>
+    <div class="register-container">
+
+        <canvas class="nokey1 " id="nokey" width="800" height="800">
+            Trình duyệt này không hỗ trợ canvas bạn có thể thử dùng Chrome thay thế ^_^
+        </canvas>
+        <div class="aside-left">
+
+        </div>
+        <div class="aside-right">
+
+            <form id="register-form">
+                <div class="header">
+                    <h3>Đăng ký</h3>
+                </div>
+                <div class="input-name-wrapper">
+                    <div class="input-wrapper">
+                        <input type="text" name="firstName" placeholder="Tên">
+                        <div class="error" id="first-name-error"></div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input type="text" name="lastName" placeholder="Họ">
+                        <div class="error" id="last-name-error"></div>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="email" name="email" placeholder="Email">
+                    <div class="error" id="email-error"></div>
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="password" name="password" placeholder="Mật khẩu">
+                    <div class="error" id="password-error"></div>
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="password" name="confirmPassword" placeholder="Xác nhận mật khẩu">
+                    <div class="error" id="confirm-password-error"></div>
+                </div>
+
+                <!-- xong het phan input -->
+
+                <div class="form-action">
+                    <span class="cursor-pointer" id="redirect-to-login" style="margin-left: 20px; font-size: 20px;">Đã
+                        có tài khoản? Đăng nhập</span>
+                </div>
+
+                <button class="btn" type="submit" style="margin: 10px;">
+                    <span></span>
+                    Đăng ký
+                </button>
+                <script>
+                    $(document).ready(function (e) {
+                        $('.btn').on("mouseenter", function (e) {
+                            x = e.pageX - $(this).offset().left;
+                            y = e.pageY - $(this).offset().top;
+                            $(this).find("span").css({ top: y, left: x })
+                        })
+                        $('.btn').on("mouseout", function (e) {
+                            x = e.pageX - $(this).offset().left;
+                            y = e.pageY - $(this).offset().top;
+                            $(this).find("span").css({ top: y, left: x })
+                        })
+                    })
+                </script>
+
+            </form>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
